@@ -7,140 +7,142 @@
     <!-- load bulma stylesheet -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
     <!-- load my stylesheet -->
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
-    <div class="container">
+    <div class="container box">
         <nav class="panel is-link">
-            <div class="high panel-block">
-                <p class="control panel-tabs has-icons-left search">
-                    <input type="text" name="search" class="input" placeholder="Enter location">
-                    <button type="submit" class="button is-link is-active"><i class="fa fa-search"></i></button>
-                </p>
+                <div class="high panel-block">
+                    <p class="control panel-tabs has-icons-left search">
+                        <input type="text" name="search" class="input" placeholder="Enter location">
+                        <button type="submit" class="button is-link is-active"><i class="fa fa-search"></i></button>
+                    </p>
+                </div>
+            </nav>
+            <div class="box">
+                <div>
+                    <p>
+                    <h1><i class="fa fa-map-marker"></i>&nbsp New York City</h1>
+                    </p>
+                    <p>
+                    <h3>03 September, 2020.</h3>
+                    </p>
+                </div>
+                <div>
+                    <p>
+                    <h3><strong><span>&#9728; <br> Sunny</span></strong></h3>
+                    </p>
+                    <p>
+                    <h1>36<span>&#176;</span></h1>
+                    </p>
+                </div>
             </div>
-        </nav>
-        <div class="box">
-            <p>
-            <h1><i class="fa fa-map-marker"></i>&nbsp New York City</h1>
-            </p>
-            <p>
-            <h3>03 September, 2020.</h3>
-            </p>
-            </div>
-            <div class="weather">
-            
-                <p>
-                <h3><strong><span>&#9728; <br> Sunny</span></strong></h3>
-                </p>
-                <p>
-                <h1>36<span>&#176;</span></h1>
-                </p>
-                <div class="btn is-centered panel-block">
+            <div class="btn is-centered panel-block">
                     <button type="submit" class="button is-link is-active days">7 DAYS FORECAST</button>
                     <!-- <button type="submit" class="button is-link is-active">WEEKLY</button> -->
                     <button type="submit" class="button is-link is-active month">HOURLY</button>
+            </div>
+            <div>
+                <div class="table-container">
+                    <table class="table is-stripped is-fullwidth">
+                        <tr>
+                            <th class="th">Sunday</th>
+                            <td>
+                                <h3><strong> <i fa fa-cloud aria-hidden="true"></i> Cloudy</strong></h3>
+                            </td>
+                            <td>
+                                <h1><strong>27 <span>&#176;</span></strong></h1>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="th">Monday</th>
+                            <td>
+                                <h3><strong> <i fa fa-cloud aria-hidden="true"></i> Cloudy</strong></h3>
+                            </td>
+                            <td>
+                                <h1><strong>27 <span>&#176;</span></strong></h1>
+                            </td>
+                        </tr>
+                        <var>
+                            <tr>
+                                <th class="th">Tuesday</th>
+                                <td>
+                                    <h3><strong> <i fa fa-cloud aria-hidden="true"></i> Cloudy</strong></h3>
+                                </td>
+                                <td>
+                                    <h1><strong>27 <span>&#176;</span></strong></h1>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="th">Wednessday</th>
+                                <td>
+                                    <h3><strong> <i fa fa-cloud aria-hidden="true"></i> Cloudy</strong></h3>
+                                </td>
+                                <td>
+                                    <h1><strong>27 <span>&#176;</span></strong></h1>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="th">Thursday</th>
+                                <td>
+                                    <h3><strong> <i fa fa-cloud aria-hidden="true"></i> Cloudy</strong></h3>
+                                </td>
+                                <td>
+                                    <h1><strong>27 <span>&#176;</span></strong></h1>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="th">Friday</th>
+                                <td>
+                                    <h3><strong> <i fa fa-cloud aria-hidden="true"></i> Cloudy</strong></h3>
+                                </td>
+                                <td>
+                                    <h1><strong>27 <span>&#176;</span></strong></h1>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="th">Sarturday</th>
+                                <td>
+                                    <h3><strong> <i fa fa-cloud aria-hidden="true"></i> Cloudy</strong></h3>
+                                </td>
+                                <td>
+                                    <h1><strong>27 <span>&#176;</span></strong></h1>
+                                </td>
+                            </tr>
+                    </table>
                 </div>
-                <div>
-                    <div class="table-container">
-                        <table class="table is-stripped is-fullwidth">
-                            <tr>
-                                <th class="th">Sunday</th>
-                                <td>
-                                    <h3><strong> <i fa fa-cloud aria-hidden="true"></i> Cloudy</strong></h3>
-                                </td>
-                                <td>
-                                    <h1><strong>27 <span>&#176;</span></strong></h1>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th class="th">Monday</th>
-                                <td>
-                                    <h3><strong> <i fa fa-cloud aria-hidden="true"></i> Cloudy</strong></h3>
-                                </td>
-                                <td>
-                                    <h1><strong>27 <span>&#176;</span></strong></h1>
-                                </td>
-                            </tr>
-                            <var>
-                                <tr>
-                                    <th class="th">Tuesday</th>
-                                    <td>
-                                        <h3><strong> <i fa fa-cloud aria-hidden="true"></i> Cloudy</strong></h3>
-                                    </td>
-                                    <td>
-                                        <h1><strong>27 <span>&#176;</span></strong></h1>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th class="th">Wednessday</th>
-                                    <td>
-                                        <h3><strong> <i fa fa-cloud aria-hidden="true"></i> Cloudy</strong></h3>
-                                    </td>
-                                    <td>
-                                        <h1><strong>27 <span>&#176;</span></strong></h1>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th class="th">Thursday</th>
-                                    <td>
-                                        <h3><strong> <i fa fa-cloud aria-hidden="true"></i> Cloudy</strong></h3>
-                                    </td>
-                                    <td>
-                                        <h1><strong>27 <span>&#176;</span></strong></h1>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th class="th">Friday</th>
-                                    <td>
-                                        <h3><strong> <i fa fa-cloud aria-hidden="true"></i> Cloudy</strong></h3>
-                                    </td>
-                                    <td>
-                                        <h1><strong>27 <span>&#176;</span></strong></h1>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th class="th">Sarturday</th>
-                                    <td>
-                                        <h3><strong> <i fa fa-cloud aria-hidden="true"></i> Cloudy</strong></h3>
-                                    </td>
-                                    <td>
-                                        <h1><strong>27 <span>&#176;</span></strong></h1>
-                                    </td>
-                                </tr>
-                        </table>
-                    </div>
-                    <div class="table-container">
-                        <table class="table is-stripped is-fullwidth">
-                            <tr>
-                                <th>MORNING</th>
-                                <td>
-                                    <h3><strong> <i fa fa-cloud aria-hidden="true"></i> Cloudy</strong></h3>
-                                </td>
-                                <td>
-                                    <h1><strong>27 <span>&#176;</span></strong></h1>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>AFTERNOON</th>
-                                <td>
-                                    <h3><strong> <i fa fa-cloud aria-hidden="true"></i> Cloudy</strong></h3>
-                                </td>
-                                <td>
-                                    <h1><strong>27 <span>&#176;</span></strong></h1>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>EVENING</th>
-                                <td>
-                                    <h3><strong> <i fa fa-cloud aria-hidden="true"></i> Cloudy</strong></h3>
-                                </td>
-                                <td>
-                                    <h1><strong>27 <span>&#176;</span></strong></h1>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
+                <div class="table-container">
+                    <table class="table is-stripped is-fullwidth">
+                        <tr>
+                            <th>MORNING</th>
+                            <td>
+                                <h3><strong> <i fa fa-cloud aria-hidden="true"></i> Cloudy</strong></h3>
+                            </td>
+                            <td>
+                                <h1><strong>27 <span>&#176;</span></strong></h1>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>AFTERNOON</th>
+                            <td>
+                                <h3><strong> <i fa fa-cloud aria-hidden="true"></i> Cloudy</strong></h3>
+                            </td>
+                            <td>
+                                <h1><strong>27 <span>&#176;</span></strong></h1>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>EVENING</th>
+                            <td>
+                                <h3><strong> <i fa fa-cloud aria-hidden="true"></i> Cloudy</strong></h3>
+                            </td>
+                            <td>
+                                <h1><strong>27 <span>&#176;</span></strong></h1>
+                            </td>
+                        </tr>
+                    </table>
                 </div>
+            </div>
         </div>
     </div>
 </body>
