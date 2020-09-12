@@ -1,0 +1,16 @@
+{
+    "lang": "en",
+    "name": "Smash It weather app",
+    "short": "SI weather app",
+    "start_url": "./index.html",
+    "display": "standalone",
+    "background_color": "#87CEEB",
+    "orientation": "any",
+    "theme": "blue",
+    "description": "A simple weather app",
+    "icons": [{
+        "src": "images/touch/homescreen48.png",
+        "sizes": "48x48",
+        "type": "image/png"
+    }]
+}
