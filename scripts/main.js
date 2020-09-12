@@ -1,32 +1,51 @@
+// get button element
 
- search = document.getElementById("button"),
+ let search = document.getElementById("button");
+ let condition = document.getElementById("condition").innerHTML;
+ let date = document.getElementById("date").innerHTML;
+ let temp = document.getElementById("temp").innerHTML;
+ let place = document.getElementById("place").innerHTML;
+let icon = document.getElementsByTagName('img')[0].getAttribute('src');
+ let city = document.getElementById("input");
+ let apiKey = "671ac19158660d3002a5c97bffb59b1b";
 
-    search.addEventListener('click', (reg) => {
-       let city = document.getElementById("input");
-       let apiKey = "671ac19158660d3002a5c97bffb59b1b";
-        //fectch data from the API
-       fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city.value}&appid=${apiKey}&units=metric`)
-            .then(res => res.json())
-            .then(data => {
-                result = data;
+ clear = () => {
+     this.city.value = "";
+ }
 
-                // get html data
-                condition = document.getElementById("condition").innerHTML;
-                date = document.getElementById("date").innerHTML;
-                temp = document.getElementById("temp").innerHTML;
-                place = document.getElementById("place").innerHTML;
-                console.log(result)
+ serverRes = () => {
+     // declare variables for fetch call 
+     let city = document.getElementById("input");
+     let apiKey = "671ac19158660d3002a5c97bffb59b1b";
 
-                //assign results to html data
-                
-                document.getElementById("place").innerHTML = result.name
-                document.getElementById("date").innerHTML = new Date(result.dt*1000).toDateString();
-                document.getElementsByTagName('img').item(0).src = "http://openweathermap.org/img/wn/" + result.weather[0].icon + "@2x" +  ".png"
-                document.getElementById("condition").innerHTML = result.weather[0].description;
-                document.getElementById("temp").innerHTML = Math.round(result.main.temp) + '&deg' + 'C'
-                console.log(result.name, result.dt*1000, result.main.temp, result.weather[0].main, result.main.pressure, result.main.humidity,  result.weather[0].description)
-                })
-            .catch(err => console.log(err));
-})
+     // make a fetch call 
+     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city.value}&appid=${apiKey}&units=metric`)
+         .then(res => res.json())
+         .then(data => {
+             result = data;
 
+             //assign results to html data
 
+             this.place.innerHTML = result.name
+             this.date.innerHTML = new Date(result.dt * 1000).toDateString();
+             document.getElementsByTagName('img')[0].src = "http://openweathermap.org/img/wn/" + result.weather[0].icon + "@2x" + ".png"
+             this.condition.innerHTML = result.weather[0].description;
+             this.temp.innerHTML = Math.round(result.main.temp) + '&deg' + 'C'
+            city.value = "";
+         })
+         .catch(err => console.log(err));
+
+ }
+
+  //  addEventListeners
+    search.addEventListener('click', serverRes);
+    city.addEventListener('keypress', (e) => {
+     if(e.keyCode === 13) {
+         this.serverRes()
+     }
+ })
+
+ document.addEventListener('DOMContentLoaded', (event) => {
+    city.value = 'London'
+    this.serverRes();
+});
