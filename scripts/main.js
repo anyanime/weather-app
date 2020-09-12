@@ -1,11 +1,12 @@
 // get button element
 
  let search = document.getElementById("button");
- let condition = document.getElementById("condition").innerHTML;
- let date = document.getElementById("date").innerHTML;
- let temp = document.getElementById("temp").innerHTML;
- let place = document.getElementById("place").innerHTML;
+ let condition = document.getElementById("condition");
+ let date = document.getElementById("date");
+ let temp = document.getElementById("temp");
+ let place = document.getElementById("place");
 let icon = document.getElementsByTagName('img')[0].getAttribute('src');
+let time = document.getElementById('time');
  let city = document.getElementById("input");
  let apiKey = "671ac19158660d3002a5c97bffb59b1b";
 
@@ -23,13 +24,16 @@ let icon = document.getElementsByTagName('img')[0].getAttribute('src');
          .then(res => res.json())
          .then(data => {
              result = data;
+            // get date and time from api fetch 
+             let  Day = new Date(result.dt * 1000).toDateString();
+             let Time = new Date(result.dt * 1000).toTimeString(); 
 
              //assign results to html data
-
              this.place.innerHTML = result.name
-             this.date.innerHTML = new Date(result.dt * 1000).toDateString();
+             this.date.innerHTML = Day
              document.getElementsByTagName('img')[0].src = "http://openweathermap.org/img/wn/" + result.weather[0].icon + "@2x" + ".png"
              this.condition.innerHTML = result.weather[0].description;
+             this.time.innerHTML = Time.slice(0, 5)
              this.temp.innerHTML = Math.round(result.main.temp) + '&deg' + 'C'
             city.value = "";
          })
@@ -46,6 +50,5 @@ let icon = document.getElementsByTagName('img')[0].getAttribute('src');
  })
 
  document.addEventListener('DOMContentLoaded', (event) => {
-    city.value = 'London'
-    this.serverRes();
+    this.serverRes(city.value = "london");
 });
