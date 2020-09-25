@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,43 +15,46 @@
     <!-- load manifest script -->
     <link rel="manifest" href="manifest.json">
 </head>
+
 <body>
     <div class="container box">
-           <nav class="panel is-link">
-                <div class="high panel-block">
-                    <p class="control panel-tabs has-icons-left search">
-                        <label for="">
-                            <input type="text" name="search" class="input" id="input" placeholder="Enter location">
-                        </label>
-                        <button type="submit" class="button is-link is-active" id="button" aria-hidden="true" ><i class="fa fa-search"></i></button>
-                    </p>
-                </div>
-            </nav>
-            <div class="box">
-                <div>
-                    <p>
-                        <span><i class="fa fa-map-marker fa-lg"></i></span>
-                    <h1 id="place">New York City</h1>
-                    </p>
-                    <p id="time"></p>
-                    <p>
-                    <h3 id="date">03 September, 2020.</h3>
-                    </p>
-                </div>
-                <div class="icon img">
-                    <img src="" height="20px" width="30px" >
-                </div>
-                <div>    
-                    <h3 id="condition">Sunny</h3>
-                    <p>
-                    <h1 id="temp">36&deg;</h1>
-                    </p>
-              </div>
+        <div class="box">
+            <div>
+                <p>
+                    <span><i class="fa fa-map-marker fa-lg"></i></span>
+                <h1 id="place">New York City</h1>
+                </p>
+                <p id="time"></p>
+                <p>
+                <h3 id="date">03 September, 2020.</h3>
+                </p>
             </div>
+            <div class="icon img">
+                <img src="" height="20px" width="30px">
+            </div>
+            <div>
+                <h3 id="condition">Sunny</h3>
+                <p>
+                <h1 id="temp">36&deg;</h1>
+                </p>
+            </div>
+        </div>
+        <section class="panel is-link">
+            <div class="high panel-block">
+                <p class="control panel-tabs has-icons-left search">
+                    <label for="">
+                        <input type="text" name="search" class="input" id="input" placeholder="Enter location">
+                    </label>
+                    <button type="submit" class="button is-link is-active" id="button" aria-hidden="true"><i
+                            class="fa fa-search"></i></button>
+                </p>
+            </div>
+        </section>
     </div>
 
     <script src="./scripts/main.js"></script>
     <script src="./sw.js"></script>
-    <script src="./sw1.js"></script> -->
+    <script src="./sw1.js"></script>
 </body>
+
 </html>
