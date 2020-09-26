@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,43 +15,45 @@
     <!-- load manifest script -->
     <link rel="manifest" href="manifest.json">
 </head>
+
 <body>
-    <div class="container box">
-           <nav class="panel is-link">
-                <div class="high panel-block">
-                    <p class="control panel-tabs has-icons-left search">
-                        <label for="">
-                            <input type="text" name="search" class="input" id="input" placeholder="Enter location">
-                        </label>
-                        <button type="submit" class="button is-link is-active" id="button" aria-hidden="true" ><i class="fa fa-search"></i></button>
-                    </p>
+    <div class="container box mt-6">
+        <div class="box my-6">
+            <section class="weather-info">
+                <div class="img">
+                    <img src="" height="300px">
                 </div>
-            </nav>
-            <div class="box">
-                <div>
-                    <p>
-                        <span><i class="fa fa-map-marker fa-lg"></i></span>
-                    <h1 id="place">New York City</h1>
-                    </p>
-                    <p id="time"></p>
-                    <p>
-                    <h3 id="date">03 September, 2020.</h3>
-                    </p>
+                <div class="weather-details mb-6">
+                    <p class="subtitle is-5 mb-0" id="condition">Sunny</p>
+                    <p class="subtitle is-2" id="temp">36&deg;</p>
                 </div>
-                <div class="icon img">
-                    <img src="" height="20px" width="30px" >
+            </section>
+            <section class="location my-4">
+                <span><i class="fa fa-map-marker fa-lg"></i></span>
+                <h1 class="title is-5" id="place">New York City</h1>
+            </section>
+            <section class="time mb-6">
+                <h3 class="subtitle is-4 mb-0" id="time"></h3>
+                <h3 class="subtitle is-6    " id="date">03 September, 2020.</h3>
+            </section>
+        </div>
+        <section>
+            <div class="field">
+                <div class="control">
+                    <input type="text" name="search" class="input is-medium" id="input"
+                        placeholder="Enter your location">
                 </div>
-                <div>    
-                    <h3 id="condition">Sunny</h3>
-                    <p>
-                    <h1 id="temp">36&deg;</h1>
-                    </p>
-              </div>
             </div>
+            <button type="submit" class="button is-link is-medium" id="button" aria-hidden="true"><i
+                    class="fa fa-search"></i>
+                &nbsp;
+                Check Weather</button>
+        </section>
     </div>
 
     <script src="./scripts/main.js"></script>
     <script src="./sw.js"></script>
-    <script src="./sw1.js"></script> -->
+    <script src="./sw1.js"></script>
 </body>
+
 </html>

@@ -1,9 +1,26 @@
 html {
-    background-color: skyblue;
-    text-align: center;
+  background-color: skyblue;
+  text-align: center;
 }
 
 .container {
-    background-color: skyblue;
+  background-color: skyblue;
 }
 
+#button {
+  padding: 1rem 6.4rem;
+}
+
+#input {
+  width: 60%;
+}
+
+@media only screen and (max-width: 600px) {
+  #input {
+    width: 100%;
+  }
+
+  .container .box {
+    box-shadow: none;
+  }
+}
